@@ -23,7 +23,7 @@ router.get('/:user_id/destroy', function(req, res) {
 router.post('/:user_id/tasks/create', function (req, res) {
   models.Task.create({
     title: req.body.title,
-    UserId: req.params.user_id
+    user_id: req.params.user_id
   }).then(function() {
     res.redirect('/');
   });
