@@ -14,5 +14,14 @@ module.exports = {
     host: process.env.DB_HOSTNAME || 'localhost',
     dialect: 'mysql',
     // use_env_variable: 'DATABASE_URL'
+    define: {
+          underscored: true,
+          freezeTableName: false,
+          charset: 'utf8',
+          dialectOptions: {
+          collate: 'utf8_general_ci'
+          },
+      timestamps: true
+    },
   }
 };
